@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <section class="inicio">
+    <section id="inicio">
         <div class="section-1-subcontainer">
           <div class="name-container">
             <p>Gabriel Carvalho,</p>
@@ -17,7 +17,7 @@
               </a>
             </div>
             <div class="">
-              <a href="/">
+              <a href="https://wa.me/5518991163599?text=Ol%C3%A1+Gabriel%2C+tudo+bem%3F+Estou+entrando+em+contato+com+voc%C3%AA+atrav%C3%A9s+do+seu+portf%C3%B3lio%2C+podemos+conversar+quando+voc%C3%AA+estiver+dispon%C3%ADvel%3F">
                 <button class="section-1-btn btn-2">Entrar em contato</button>
               </a>
             </div>
@@ -34,9 +34,10 @@
 </template>
 
 <style scoped>
-.inicio {
+#inicio {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   margin: 90px 0 0 0;
 }
@@ -46,6 +47,7 @@
 }
 .image {
   max-width: 420px;
+  width: 100%;
   border-radius: 50%;
   border: 3px solid var(--purple-background);
   transition: 0.2s ease-in-out;
@@ -60,6 +62,7 @@
 }
 .buttons-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin: 20px 0 0 0;
 }
@@ -90,5 +93,34 @@
   transform: scale(1.1);
   background-color: #fff;
   color: #000;
+}
+@media screen and (max-width: 990px) {
+  #inicio {
+    flex-direction: column-reverse;
+    margin: 40px 0 0 0;
+  }
+  .name-container,
+  .profission-container {
+    padding: 0 20px;
+  }
+  .buttons-container {
+    justify-content: center;
+  }
+  .section-1-image {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .name-container p {
+    font-size: 12vw;
+  }
+  .profission-container p {
+    font-size: 12vw;
+  }
+  .section-1-btn {
+    width: 90vw;
+    height: 60px;
+    border-radius: 40px;
+  }
 }
 </style>

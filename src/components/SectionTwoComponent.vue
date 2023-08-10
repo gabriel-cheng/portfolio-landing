@@ -37,6 +37,7 @@
     max-width: 700px;
     width: 100%;
     text-align: center;
+    padding: 0 20px;
 }
 .sobre-content p {
     font-size: 1.8rem;
